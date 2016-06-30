@@ -5,12 +5,15 @@ import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContexts;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Service;
 
 import br.com.triadworks.loja.model.Cliente;
+import br.com.triadworks.loja.model.Usuario;
 import br.com.triadworks.loja.service.ClienteService;
 
 

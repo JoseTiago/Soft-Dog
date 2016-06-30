@@ -3,6 +3,7 @@ package br.com.triadworks.loja.service;
 import java.util.List;
 
 import br.com.triadworks.loja.model.Cliente;
+import br.com.triadworks.loja.model.Usuario;
 
 public interface ClienteService {
 
@@ -17,4 +18,5 @@ public interface ClienteService {
 	public void atualiza(Cliente cliente);
 	
 	public List<Cliente> busca (String nome);
+	
 }

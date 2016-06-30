@@ -118,6 +118,5 @@ public class Cliente implements Serializable {
 		this.observacao = observacao;
 	}
 	
-	
-	
+
 }

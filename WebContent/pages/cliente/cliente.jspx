@@ -188,6 +188,14 @@
 						<h:inputTextarea value="#{clienteBean.cliente.observacao}"
 							required="true" id="observacao" label="observacao"/>
 							
+							<h:outputLabel value="Login" for="login" />
+						<h:inputTextarea value="#{UsuarioWeb.Usuario.login}"
+							required="true" id="login" label="login"/>
+							
+							<h:outputLabel value="Senha" for="senha" />
+						<h:inputTextarea value="#{UsuarioWeb.Usuario.senha}"
+							required="true" id="senha" label="senha"/>
+							
 						<div align="right">
 							<a4j:commandLink 
 								id="voltar"

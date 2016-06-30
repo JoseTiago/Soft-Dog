@@ -20,11 +20,12 @@
 		</div>
 		<div id="menuWrap">
 			<ul id="menuElementsEn">
-				<li><a href="${ctx}/home.faces"><span>Home</span></a>
-				</li>
+				<li><a href="${ctx}/home.faces"><span>Home</span></a></li>
+				
 				<li><a href="${ctx}/pages/cliente/cliente.faces"><span>Clientes</span></a></li>
 				<li><a href="${ctx}/pages/produto/produto.faces"><span>Produto</span></a>
 				</li>
+			<li><a href="${ctx}/pages/carrinho.faces"><span>Carrinho</span></a></li>
 			</ul><!-- menuElements-->
 		</div><!-- menuWrap-->
 	</t:div>

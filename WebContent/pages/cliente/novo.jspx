@@ -64,6 +64,14 @@
 						<h:outputLabel value="Observação" />
 					<h:inputTextarea rows="6" value="#{clienteBean.cliente.observacao}"
 						required="true" id="observacao" label="observacao"/>
+						
+						<h:outputLabel value="Login" />
+					<h:inputTextarea rows="6" value="#{clienteBean.cliente.login}"
+						required="true" id="login" label="login"/>
+						
+						<h:outputLabel value="Senha" />
+					<h:inputTextarea rows="6" value="#{clienteBean.cliente.senha}"
+						required="true" id="senha" label="senha"/>
 					
 					<div align="right">
 						<h:commandLink value="voltar" immediate="true" action="lista_produtos" /> &#160;

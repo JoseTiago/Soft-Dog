@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import br.com.triadworks.loja.model.Cliente;
+import br.com.triadworks.loja.model.Usuario;
 import br.com.triadworks.loja.service.ClienteService;
 import br.com.triadworks.loja.util.FacesUtils;
 
@@ -19,6 +20,7 @@ public class ClienteBean {
 
 	private Cliente cliente = new Cliente();
 	private List<Cliente> clientes = new ArrayList<Cliente>();
+	
 	
 	private static final String ESTADO_DE_PESQUISA = "_pesquisa";
 	private static final String ESTADO_NOVO = "_novo";
@@ -121,5 +123,8 @@ public class ClienteBean {
 	public void setForm(UIForm form) {
 		this.form = form;
 	}	
+	
+	
+	
 }
  
