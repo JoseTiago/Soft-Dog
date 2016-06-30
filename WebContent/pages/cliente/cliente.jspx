@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:mcc="http://myfaces.apache.org/commons/converters"
+	template="/pages/template/template_padrao.jspx">
+	
+	<ui:define name="conteudo">
+	
+		<a4j:loadScript src="/js/jquery.maskMoney.js" />
+	
+		<div id="container">
+			<h1>Cadastro de Cliente</h1>
+			
+			<!-- Normalmente para CRUDs só precisa prolongar o escopo destes 3 atributos -->
+			<t:saveState value="#{clienteBean.cliente}" />
+			<t:saveState value="#{clienteBean.clientes}" />
+			<t:saveState value="#{clienteBean.state}" />
+			
+			<h:form id="form" binding="#{clienteBean.form}">
+				<t:div id="blocoDePesquisa" rendered="#{clienteBean.pesquisando}">
+					<div align="right">
+						<a4j:commandLink
+							id="novo"
+							value="Novo" 
+							action="#{clienteBean.preparaParaAdicionar}"
+							reRender="form" /> &#160;
+						<a4j:commandButton value="Listar" 
+							action="#{clienteBean.lista}"
+							reRender="tabela_de_clientes" />	
+					</div>
+					<h:dataTable
+						id="tabela_de_clientes"
+						value="#{clienteBean.clientes}"
+						var="cliente"
+						rowClasses="odd, even">
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Id"/>
+							</f:facet>
+							<h:outputText value="#{cliente.id}"/>
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Nome"/>
+							</f:facet>
+							<h:outputText value="#{cliente.nome}"/>
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="cpf"/>
+							</f:facet>
+							<h:outputText value="#{cliente.cpf}"/>
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="rg"/>
+							</f:facet>
+							<h:outputText value="#{cliente.rg}"/>
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="estadoCivil"/>
+							</f:facet>
+							<h:outputText value="#{cliente.estadoCivil}"/>
+							
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Ações"/>
+							</f:facet>
+							<a4j:commandLink value="editar" 
+								action="#{clienteBean.preparaParaAlterar}"
+								reRender="form">
+								<f:setPropertyActionListener value="#{cliente}" target="#{clienteBean.cliente}"/>
+							</a4j:commandLink> &#160;	
+							<a4j:commandLink value="remover" 
+								action="#{clienteBean.remove}"
+								reRender="tabela_de_clientes"
+								onclick="if(!confirm('Deseja realmente remover este cliente?')) {return false;}">
+								<f:setPropertyActionListener value="#{cliente}" target="#{clienteBean.cliente}"/>
+							</a4j:commandLink>
+						</h:column>
+					</h:dataTable>
+				</t:div>
+				<t:div id="blocoDeEdicao" rendered="#{!clienteBean.pesquisando}">
+					<span id="emEdicao"></span>
+					<div align="left">
+						<h:outputLabel value="Nome" for="nome"/>
+						<h:inputText value="#{clienteBean.cliente.nome}"
+							required="true" id="nome" label="Nome">
+							<f:validateLength minimum="3" />
+						</h:inputText>
+						<h:outputLabel value="cpf" for="cpf"/>
+						<h:inputTextarea rows="12" value="#{clienteBean.cliente.cpf}"
+							required="true" id="cpf" label="Cpf"/>
+						<h:outputLabel value="Rg" for="Rg"/>
+						<h:inputText value="#{clienteBean.cliente.rg}"
+							required="true" id="rg" label="Rg"/>
+							<h:outputLabel value="estadoCivil" for="estadoCivil"/>
+						<h:inputText value="#{clienteBean.cliente.estadoCivil}"
+							required="true" id="estadoCivil" label="Estado Civil"/>
+						<div align="right">
+							<a4j:commandLink 
+								id="voltar"
+								value="voltar" immediate="true"
+								action="#{clienteBean.volta}" 
+								reRender="form" /> &#160;
+							<a4j:commandButton 
+								id="inserir"
+								value="inserir" 
+								action="#{clienteBean.adiciona}" 
+								reRender="form"
+								rendered="#{clienteBean.adicionando}"/>
+							<a4j:commandButton 
+								id="alterar" 
+								value="altera" 
+								action="#{clienteBean.altera}" 
+								reRender="form"
+								rendered="#{clienteBean.editando}"/>
+						</div>
+					</div>
+				</t:div>
+			</h:form>
+		</div>
+	</ui:define>
+	
+</ui:composition>

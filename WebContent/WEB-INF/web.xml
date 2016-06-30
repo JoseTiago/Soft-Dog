@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	
-	<display-name>Loja de Cacarecos</display-name>
+	<display-name>Loja de Vendas Alvorada</display-name>
 	
 	<!-- ******************************************************* -->
 	<!-- Configuração da ordem dos Servlet Filters -->

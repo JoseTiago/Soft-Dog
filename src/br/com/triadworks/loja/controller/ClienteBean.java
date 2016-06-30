@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import br.com.triadworks.loja.model.Cliente;
 import br.com.triadworks.loja.service.ClienteService;
-import br.com.triadworks.loja.service.ProdutoService;
 import br.com.triadworks.loja.util.FacesUtils;
 
 @Component

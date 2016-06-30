@@ -10,7 +10,7 @@
 	<div id="footerWrap">
 	     <div class="footbar" >
 			<p>
-				<a href="${ctx}">Loja de Cacarecos</a> - Bugigangas e Afins
+				<a href="${ctx}">Loja de Vendas Alvorada</a> - Bugigangas e Afins
 			</p>
 		</div><!-- footer content -->
 	</div><!-- footer wrap-->
