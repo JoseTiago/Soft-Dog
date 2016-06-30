@@ -31,6 +31,8 @@ public class Cliente implements Serializable {
 	private String celular;
 	private String email;
 	private String observacao;
+	
+	
 	public Integer getId() {
 		return Id;
 	}

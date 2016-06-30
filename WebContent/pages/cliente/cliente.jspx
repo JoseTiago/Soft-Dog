@@ -54,23 +54,68 @@
 						</h:column>
 						<h:column>
 							<f:facet name="header">
-								<h:outputText value="cpf"/>
+								<h:outputText value="Cpf"/>
 							</f:facet>
 							<h:outputText value="#{cliente.cpf}"/>
 						</h:column>
+						
 						<h:column>
 							<f:facet name="header">
-								<h:outputText value="rg"/>
-							</f:facet>
-							<h:outputText value="#{cliente.rg}"/>
-						</h:column>
-						<h:column>
-							<f:facet name="header">
-								<h:outputText value="estadoCivil"/>
+								<h:outputText value="Estado Civil"/>
 							</f:facet>
 							<h:outputText value="#{cliente.estadoCivil}"/>
 							
 						</h:column>
+						
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="Endereco"/>
+							</f:facet>
+							<h:outputText value="#{cliente.endereco}"/>
+							</h:column>
+							
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="Numero"/>
+							</f:facet>
+							<h:outputText value="#{cliente.numero}"/>
+							</h:column>
+							
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="Complemento"/>
+							</f:facet>
+							<h:outputText value="#{cliente.complemento}"/>
+							</h:column>
+							
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="Numero Telefone"/>
+							</f:facet>
+							<h:outputText value="#{cliente.numeroTelefone}"/>
+							</h:column>
+							
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="Celular"/>
+							</f:facet>
+							<h:outputText value="#{cliente.celular}"/>
+							</h:column>
+							
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="E-mail"/>
+							</f:facet>
+							<h:outputText value="#{cliente.email}"/>
+							</h:column>
+							
+							<h:column>
+							<f:facet name="header">
+								<h:outputText value="Observações"/>
+							</f:facet>
+							<h:outputText value="#{cliente.observacao}"/>
+							</h:column>
+						
 						<h:column>
 							<f:facet name="header">
 								<h:outputText value="Ações"/>
@@ -97,15 +142,52 @@
 							required="true" id="nome" label="Nome">
 							<f:validateLength minimum="3" />
 						</h:inputText>
-						<h:outputLabel value="cpf" for="cpf"/>
-						<h:inputTextarea rows="12" value="#{clienteBean.cliente.cpf}"
-							required="true" id="cpf" label="Cpf"/>
-						<h:outputLabel value="Rg" for="Rg"/>
+						<h:outputLabel value="Cpf" for="cpf"/>
+						<h:inputText rows="12" value="#{clienteBean.cliente.cpf}"
+							required="true" id="cpf" label="Cpf" />
+						<h:outputLabel value="Rg" for="rg" />
 						<h:inputText value="#{clienteBean.cliente.rg}"
 							required="true" id="rg" label="Rg"/>
-							<h:outputLabel value="estadoCivil" for="estadoCivil"/>
+							<h:outputLabel value="Estado Civil" for="estadoCivil"/>
 						<h:inputText value="#{clienteBean.cliente.estadoCivil}"
 							required="true" id="estadoCivil" label="Estado Civil"/>
+							
+							<h:outputLabel value="Profissao" for="profissao"/>
+						<h:inputText value="#{clienteBean.cliente.profissao}"
+							required="true" id="profissao" label="profissao"/>
+							
+							<h:outputLabel value="Cep" for="cep"/>
+						<h:inputText value="#{clienteBean.cliente.cep}"
+							required="true" id="cep" label="cep"/>
+							
+							<h:outputLabel value="Enderço" for="endereco"/>
+						<h:inputText value="#{clienteBean.cliente.endereco}"
+							required="true" id="endereco" label="endereco"/>
+							
+							<h:outputLabel value="Numero" for="numero" />
+						<h:inputText value="#{clienteBean.cliente.numero}"
+							required="true" id="numero" label="numero" style="width: 50px;"/>
+							
+							<h:outputLabel value="Complemento" for="complemento" />
+						<h:inputText value="#{clienteBean.cliente.complemento}"
+							required="true" id="complemento" label="complemento"/>
+							
+								<h:outputLabel value="Numero Telefone" for="numeroTelefone" />
+						<h:inputText value="#{clienteBean.cliente.numeroTelefone}"
+							required="true" id="numeroTelefone" label="numeroTelefone"/>
+							
+							<h:outputLabel value="Celular" for="celular" />
+						<h:inputText value="#{clienteBean.cliente.celular}"
+							required="true" id="celular" label="celular"/>
+							
+							<h:outputLabel value="E-mail" for="email" />
+						<h:inputText value="#{clienteBean.cliente.email}"
+							required="true" id="email" label="email"/>
+							
+							<h:outputLabel value="Observação" for="observacao" />
+						<h:inputTextarea value="#{clienteBean.cliente.observacao}"
+							required="true" id="observacao" label="observacao"/>
+							
 						<div align="right">
 							<a4j:commandLink 
 								id="voltar"

@@ -68,10 +68,10 @@ public class ClienteBean {
 	
 	public void alterar(){
 		clienteService.atualiza(cliente);
-		facesUtils.adicionaMensagemDeInformacao("Produto alterado com Sucesso");
+		facesUtils.adicionaMensagemDeInformacao("cliente alterado com Sucesso");
 	}
 	
-	public void voltar(){
+	public void volta() {
 		limpa();
 		setState(ESTADO_DE_PESQUISA);
 	}
@@ -79,21 +79,17 @@ public class ClienteBean {
 	private void limpa() {
 		cliente = new Cliente();
 		facesUtils.cleanSubmittedValues(form);
-		
 	}
 	
-	public boolean isPesquisando(){
+	public boolean isPesquisando() {
 		return ESTADO_DE_PESQUISA.equals(state);
 	}
-	
-	public boolean isEditando(){
+	public boolean isEditando() {
 		return ESTADO_DE_EDICAO.equals(state);
 	}
-	
-	public boolean isAdicionando(){
+	public boolean isAdicionando() {
 		return ESTADO_NOVO.equals(state);
 	}
-	
 
 	public Cliente getCliente() {
 		return cliente;
@@ -114,10 +110,8 @@ public class ClienteBean {
 	public String getState() {
 		return state;
 	}
-
-	private void setState(String state) {
+	public void setState(String state) {
 		this.state = state;
-		
 	}
 
 	public UIForm getForm() {
