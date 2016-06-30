@@ -41,7 +41,7 @@
 						var="cliente"
 						rowClasses="odd, even">
 						<h:column>
-							<f:facet name="header">
+							<f:facet name="header"> 
 								<h:outputText value="Id"/>
 							</f:facet>
 							<h:outputText value="#{cliente.id}"/>
