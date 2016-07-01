@@ -7,6 +7,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Service;
 
+import br.com.triadworks.loja.model.Cliente;
 import br.com.triadworks.loja.model.Usuario;
 import br.com.triadworks.loja.service.UsuarioService;
 
@@ -16,13 +17,13 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@PersistenceContext
 	EntityManager entityManager;
 	
-	public Usuario autentica(String login, String senha) {
-		String hql = "from Usuario u where u.login = :login and u.senha = :senha";
+	public Cliente autentica(String login, String senha) {
+		String hql = "from Cliente u where u.login = :login and u.senha = :senha";
 		Query query = entityManager.createQuery(hql)
 			.setParameter("login", login)
 			.setParameter("senha", senha);
 		try {
-			return (Usuario) query.getSingleResult();
+			return (Cliente) query.getSingleResult();
 		} catch (NoResultException e) {
 			return null;
 		}

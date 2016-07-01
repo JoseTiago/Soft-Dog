@@ -189,11 +189,11 @@
 							required="true" id="observacao" label="observacao"/>
 							
 							<h:outputLabel value="Login" for="login" />
-						<h:inputTextarea value="#{UsuarioWeb.Usuario.login}"
+						<h:inputText value="#{clienteBean.cliente.login}"
 							required="true" id="login" label="login"/>
 							
 							<h:outputLabel value="Senha" for="senha" />
-						<h:inputTextarea value="#{UsuarioWeb.Usuario.senha}"
+						<h:inputSecret value="#{clienteBean.cliente.senha}"
 							required="true" id="senha" label="senha"/>
 							
 						<div align="right">

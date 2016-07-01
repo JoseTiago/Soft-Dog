@@ -33,6 +33,9 @@ public class ClienteBean {
 	private final ClienteService clienteService;
 	private final FacesUtils facesUtils;
 	
+	private String login;
+	private String senha;
+	
 	@Autowired
 	public ClienteBean(ClienteService clienteService, FacesUtils facesUtils){
 	
@@ -40,6 +43,7 @@ public class ClienteBean {
 		this.facesUtils = facesUtils;	
 		
 	}
+	
 	
 	public void lista(){
 		clientes = clienteService.listaTudo();

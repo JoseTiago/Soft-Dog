@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import br.com.triadworks.loja.model.Cliente;
 import br.com.triadworks.loja.model.Usuario;
 import br.com.triadworks.loja.service.UsuarioService;
 import br.com.triadworks.loja.util.FacesUtils;
@@ -27,7 +28,7 @@ public class LoginBean {
 	}
 
 	public String logar() {
-		Usuario usuario = usuarioService.autentica(login, senha);
+		Cliente usuario = usuarioService.autentica(login, senha);
 		if (usuario != null) {
 			usuarioWeb.loga(usuario);
 			return "home";

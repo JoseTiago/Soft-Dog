@@ -31,7 +31,25 @@ public class Cliente implements Serializable {
 	private String celular;
 	private String email;
 	private String observacao;
+	private String login;
+	private String senha;
 	
+	//Usuario
+	
+	
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	// Fim Usuario
 	
 	public Integer getId() {
 		return Id;
@@ -117,6 +135,8 @@ public class Cliente implements Serializable {
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
 	}
+
+	
 	
 
 }
