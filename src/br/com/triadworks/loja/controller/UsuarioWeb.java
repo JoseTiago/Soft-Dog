@@ -12,8 +12,8 @@ public class UsuarioWeb {
 
 	private Cliente usuario;
 
-	public void loga(Cliente usuario) {
-		this.usuario = usuario;
+	public void loga(Cliente usuario2) {
+		this.usuario = usuario2;
 	}
 	
 	public Cliente getUsuario() {

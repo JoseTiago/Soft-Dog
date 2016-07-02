@@ -196,7 +196,7 @@
 						<h:inputSecret value="#{clienteBean.cliente.senha}"
 							required="true" id="senha" label="senha"/>
 							
-						<div align="right">
+						<div align="right"> 
 							<a4j:commandLink 
 								id="voltar"
 								value="voltar" immediate="true"

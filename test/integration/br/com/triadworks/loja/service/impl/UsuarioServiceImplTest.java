@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import base.dbunit.DbUnitManager;
+import br.com.triadworks.loja.model.Cliente;
 import br.com.triadworks.loja.model.Usuario;
 import br.com.triadworks.loja.service.UsuarioService;
 
@@ -34,7 +35,7 @@ public class UsuarioServiceImplTest {
 	
 	@Test
 	public void deveriaAutenticarUsuario() {
-		Usuario usuario = service.autentica("rponte", "secret");
+		Cliente usuario = service.autentica("rponte", "secret");
 		
 		assertNotNull("Usuário encontrado", usuario);
 		assertEquals("login","rponte", usuario.getLogin());
@@ -43,7 +44,7 @@ public class UsuarioServiceImplTest {
 	
 	@Test
 	public void deveriaNaoAutenticarUsuario() {
-		Usuario usuario = service.autentica("invalid", "user");
+		Cliente usuario = service.autentica("invalid", "user");
 		assertNull("Usuário encontrado", usuario);
 	}
 	

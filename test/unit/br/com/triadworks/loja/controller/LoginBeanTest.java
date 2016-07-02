@@ -12,6 +12,7 @@ import org.mockito.MockitoAnnotations;
 
 import br.com.triadworks.loja.controller.LoginBean;
 import br.com.triadworks.loja.controller.UsuarioWeb;
+import br.com.triadworks.loja.model.Cliente;
 import br.com.triadworks.loja.model.Usuario;
 import br.com.triadworks.loja.service.UsuarioService;
 import br.com.triadworks.loja.util.FacesUtils;
@@ -79,7 +80,7 @@ public class LoginBeanTest {
 	}
 
 	private void seExisteUsuarioCadastradoCom(String login, String senha) {
-		Usuario usuario = new Usuario(login, senha);
+		Cliente usuario = new Cliente(login, senha);
 		when(usuarioService.autentica(login, senha)).thenReturn(usuario);
 	}
 	
