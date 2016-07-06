@@ -35,7 +35,7 @@ public class ClienteBean {
 	
 	private String login;
 	private String senha;
-	
+	 
 	@Autowired
 	public ClienteBean(ClienteService clienteService, FacesUtils facesUtils){
 	
