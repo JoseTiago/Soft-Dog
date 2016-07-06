@@ -3,6 +3,7 @@ package br.com.triadworks.loja.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +17,8 @@ public class Produto implements Serializable {
 	@GeneratedValue
 	private Long codigo;
 	private String nome;
+	@Column(name ="foto")
+	private byte[] foto;
 	private String descricao;
 	private BigDecimal preco;
 	
@@ -42,6 +45,12 @@ public class Produto implements Serializable {
 	}
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
+	}
+	public byte[] getFoto() {
+		return foto;
+	}
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
 	}
 	
 }

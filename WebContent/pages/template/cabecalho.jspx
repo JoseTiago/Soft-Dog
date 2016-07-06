@@ -22,8 +22,10 @@
 			<ul id="menuElementsEn">
 				<li><a href="${ctx}/home.faces"><span>Home</span></a></li>
 				
-				<li><a href="${ctx}/pages/cliente/cliente.faces"><span>Clientes</span></a></li>
-				<li><a href="${ctx}/pages/produto/produto.faces"><span>Produto</span></a>
+				<li><a href="${ctx}/pages/cliente/cliente.faces"><span>Usuarios</span></a></li>
+				<li><a href="${ctx}/pages/produto/produto.faces"><span>Produto</span></a></li>
+				<li><a href="${ctx}/pages/pedidos/pedidos.faces"><span>Pedidos</span></a></li>
+				<li><a href="${ctx}/pages/caixa/caixa.faces"><span>Caixa</span></a>
 				</li>
 			<li><a href="${ctx}/pages/carrinho.faces"><span>Carrinho</span></a></li>
 			</ul><!-- menuElements-->

@@ -11,7 +11,7 @@
 	
 	<ui:define name="conteudo">
 		<div id="container">
-			<h1>Novo Cliente</h1>
+			<h1>Novo Usuario</h1>
 			<div align="left">
 				<h:form id="form" >
 					<h:outputLabel value="Nome" />
@@ -20,51 +20,13 @@
 						<f:validateLength minimum="2" />
 					</h:inputText>
 					
-					<h:outputLabel value="Cpf" />
-					<h:inputText rows="11" value="#{clienteBean.cliente.cpf}"
-						required="true" id="cpf" label="Cpf"/>
-						
-						<h:outputLabel value="rg" />
-					<h:inputText rows="11" value="#{clienteBean.cliente.rg}"
-						required="true" id="rg" label="rg"/>
+					<h:outputLabel value="Função" />
+					<h:inputText value="#{clienteBean.cliente.funcao}"
+						required="true" id="funcao" label="funcao">
+						<f:validateLength minimum="3" />
+					</h:inputText>
 					
-					<h:outputLabel value="Estado_civil" />
-					<h:inputTextarea rows="20" value="#{clienteBean.cliente.estadoCivil}"
-						required="true" id="estadoCivil" label="Estado Civil"/>
 					
-					<h:outputLabel value="profissao" />
-					<h:inputTextarea rows="20" value="#{clienteBean.cliente.profissao}"
-						required="true" id="profissao" label="profissao"/>
-					
-					<h:outputLabel value="cep" />
-					<h:inputTextarea rows="20" value="#{clienteBean.cliente.cep}"
-						required="true" id="cep" label="cep"/>
-						
-						<h:outputLabel value="endereco" />
-					<h:inputTextarea rows="20" value="#{clienteBean.cliente.endereco}"
-						required="true" id="endereco" label="endereco"/>
-						
-						<h:outputLabel value="numero" />
-					<h:inputTextarea rows="6" value="#{clienteBean.cliente.numero}"
-						required="true" id="numero" label="numero"/>
-						
-						<h:outputLabel value="Numero Telefone" />
-					<h:inputTextarea rows="6" value="#{clienteBean.cliente.numeroTelefone}"
-						required="true" id="numeroTelefone" label="numeroTelefone"/>
-					
-						
-						<h:outputLabel value="Celular" />
-					<h:inputTextarea rows="6" value="#{clienteBean.cliente.celular}"
-						required="true" id="celular" label="celular"/>
-						
-						<h:outputLabel value="E-mail" />
-					<h:inputTextarea rows="6" value="#{clienteBean.cliente.email}"
-						required="true" id="email" label="email"/>
-						
-						<h:outputLabel value="Observação" />
-					<h:inputTextarea rows="6" value="#{clienteBean.cliente.observacao}"
-						required="true" id="observacao" label="observacao"/>
-						
 						<h:outputLabel value="Login" />
 					<h:inputTextarea rows="6" value="#{clienteBean.cliente.login}"
 						required="true" id="login" label="login"/>

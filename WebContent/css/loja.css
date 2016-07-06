@@ -5,7 +5,7 @@
 }
 
 a {
-	color: navy;
+	color: green;
 }
 
 #ajax-loading {
@@ -135,7 +135,7 @@ code *, pre * {
 
 #header {
 	height: 100px;
-	background-color: navy;
+	background-color: green;
 }
 #carrinho {
 	text-align: left;
@@ -175,7 +175,7 @@ code *, pre * {
 }
 
 body{
-	background-color:#2a2948; 
+	background-color:gray); ; 
 	text-align:center;}
 
 h1 {
