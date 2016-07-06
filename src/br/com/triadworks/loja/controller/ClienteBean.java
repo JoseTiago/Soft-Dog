@@ -26,7 +26,7 @@ public class ClienteBean {
 	private static final String ESTADO_NOVO = "_novo";
 	private static final String ESTADO_DE_EDICAO = "_edicao";
 	
-	private String state = ESTADO_DE_PESQUISA;
+	private String state = ESTADO_DE_PESQUISA; 
 	
 	private UIForm form; 
 	
