@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import br.com.triadworks.loja.model.Cliente;
 import br.com.triadworks.loja.model.Pedido;
 import br.com.triadworks.loja.service.ClienteService;
 import br.com.triadworks.loja.service.PedidoService;
@@ -55,11 +56,42 @@ public class PedidoBean {
 		lista();
 	}
 	
-	public void remove(){
+	/*public void remove(){
 		pedidoService.remove(pedido);
 		facesUtils.adicionaMensagemDeInformacao("Pedido removido com Sucesso!");
 		lista();
+	}*/
+	
+	public void preparaParaAlterar(){
+		this.pedido = pedidoService.carrega(pedido.getId());
+		setState(ESTADO_DE_EDICAO);
 	}
+	
+	public void alterar(){
+		pedidoService.atualiza(pedido);
+		facesUtils.adicionaMensagemDeInformacao("Pedido alterado com Sucesso");
+	}
+	
+	public void volta() {
+		limpa();
+		setState(ESTADO_DE_PESQUISA);
+	}
+	
+	private void limpa() {
+		pedido = new Pedido();
+		facesUtils.cleanSubmittedValues(form);
+	}
+	
+	public boolean isPesquisando() {
+		return ESTADO_DE_PESQUISA.equals(state);
+	}
+	public boolean isEditando() {
+		return ESTADO_DE_EDICAO.equals(state);
+	}
+	public boolean isAdicionando() {
+		return ESTADO_NOVO.equals(state);
+	}
+
 
 	public Pedido getPedido() {
 		return pedido;

@@ -14,7 +14,7 @@ public interface PedidoService {
 	
 	public void remove(Pedido pedido);
 	
-	public Cliente carrega(Integer id);
+	public Pedido carrega(Integer id);
 	
 	public void atualiza(Pedido pedido);
 	
